@@ -9,6 +9,8 @@ The plan should also cover exceptions, sometimes a key person will be traveling 
 
 Most 'cyber' incidents are social engineered attacks that happen to use a computer or automated systems that target anything connected to the Internet.
 
+The technical steps below are only useful if they are implemented and everyone knows the plan.
+
 ## Software updates
 The best line of defence against most 'hacks' is a system that is up to date. Your computer and phone should be set to receive and install updates from Microsoft, Google or Apple once they are available. If you get a notification that there is an update waiting to install you should install it as soon as possible. However you should also be wary of websites that pretend to be notifications of updates that are malicious. If you get a notification you can verify the update by using the system update method on windows this is the Windows Update utility in the Control Panel, on OSX this is done through the Mac App Store. 
 
