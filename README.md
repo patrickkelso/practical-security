@@ -2,6 +2,8 @@
 
 You will eventually suffer a security breach, the following are some recommendations for limiting the scope of the breach and mitigating the risk as much as possible. Security is always a trade off with convenience. Security requirements that are too onerous will result in people finding creative work arounds to avoid them. You should balance the security required with the convenience required.
 
+For a longer read on how to judge this I recommend this [Ars Technica Article](https://arstechnica.com/security/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/)
+
 ## Plan
 The most important step in security is having a plan, that is known in your office (or family) on how you will implement the following and what to do in the event of a breach or suspected breach. 
 
