@@ -1,6 +1,15 @@
-# practical-security
+# Practical Cyber Security Practices
 
-You will eventually suffer a security breach, the following are some recommendations for limiting the scope of the breach and mitigating the risk as much as possible. Security is always a trade off with convenience. Security requirements that are too onerous will result in people finding creative work arounds to avoid them. You should balance the security required with the convenience required.
+## Preamble
+I wrote this article 5 years ago, most of it is still as current now as it was then. I am updating it now (May 2022) mostly to fix spelling and grammar mistakes :( 
+
+The full history of this article and all changes can be viewed on [GitHub](https://github.com/patrickkelso/practical-security/commits/master) and I sign most commits with my GPG key that you can verify on [KeyBase](https://keybase.io/psk). (This is the nerdiest sentence in this article, it gets easier from here, honest).
+
+This article applies equally to a single person, a family, a small business, or a multinational enterprise with 1,000,000 employees.
+
+## Why is security important?
+
+You will eventually suffer a security breach, the following are some recommendations for limiting the scope of the breach and mitigating the risk as much as possible. Security is always a trade off with convenience. Security requirements that are too onerous will result in people finding creative workarounds to avoid them. You should balance the security required with the convenience required.
 
 For a longer read on how to judge this I recommend this [Ars Technica Article](https://arstechnica.com/security/2017/07/how-i-learned-to-stop-worrying-mostly-and-love-my-threat-model/)
 
@@ -9,12 +18,12 @@ The most important step in security is having a plan, that is known in your offi
 
 The plan should also cover exceptions, sometimes a key person will be traveling and not have access to their usual systems, how will you authenticate requests from them to make changes to systems or transfer money. 
 
-Most 'cyber' incidents are social engineered attacks that happen to use a computer or automated systems that target anything connected to the Internet.
+Most 'cyber' incidents are social engineered attacks that happen to use a computer or automated systems that target anything connected to the Internet. The victim receives a call claiming to be from somewhere official sounding "The Australian Government", or "Microsoft". They'll use lots of technical terms and ask you to install software so they can help you, all the while claiming it is urgent and you have to act now. They are right, you do have to act now, hang up the phone. Now!
 
-The technical steps below are only useful if they are implemented and everyone knows the plan.
+The technical steps below are only useful if they are implemented and everyone involved knows the plan.
 
 ## Software updates
-The best line of defence against most 'hacks' is a system that is up to date. Your computer and phone should be set to receive and install updates from Microsoft, Google or Apple once they are available. If you get a notification that there is an update waiting to install you should install it as soon as possible. However you should also be wary of websites that pretend to be notifications of updates that are malicious. If you get a notification you can verify the update by using the system update method on windows this is the Windows Update utility in the Control Panel, on OSX this is done through the Mac App Store. 
+The best line of defence against most 'hacks' is a system that is up to date. Your computer and phone should be set to receive and install updates from Microsoft, Google or Apple once they are available. If you get a notification that there is an update waiting to install you should install it as soon as possible. However you should also be wary of websites that pretend to be notifications of updates that are malicious. If you get a notification you can verify the update by using the system update method on windows this is the Windows Update utility in the Control Panel, on MacOS this is done through the Mac App Store. 
 
 ## Passwords
 
@@ -28,10 +37,10 @@ A good password has the following characteristics:
 
 Remembering a lot of good passwords is hard. To assist with remembering passwords a password safe is recommended. This is a secure place to store multiple passwords that is protected by one, easier to remember good password. Popular options include [Lastpass](https://lastpass.com/), [Enpass](https://www.enpass.io/), [Dashlane](https://www.dashlane.com/), [1Password](https://1password.com/) and [KeePass](https://keepassxc.org). A password safe is only as secure as the password protecting it and the quality of the code that it is programmed in. KeePass is an open source password safe which means that all the code has and can be reviewed by anyone, however it may not be as user friendly or updated as often as commercial applications.
 
-For additional security you could use one password manager for higher risk accounts like Internet banking, and a separate password manager for other sites.
+For additional security you could use one password manager for higher risk accounts like Internet banking, and a separate password manager for other sites, or one for work and one for personal.
 
 ### Step One
-Choose a password safe that you can work with, think about how you will be using it, what type of computer will it run on and what phone you have. [Here is a good article on choosing a password safe](http://www.tomsguide.com/us/best-password-managers,review-3785.html)
+Choose a password safe that you can work with, think about how you will be using it, what type of computer will it run on and what phone you have. [Here is a good article on choosing a password safe](http://www.tomsguide.com/us/best-password-managers,review-3785.html). Ideally everyone in your office/home will use the same software, and it should support sharing passwords so that you never need to write one down on a post it so someone can access a shared account.
 
 ### Step Two
 Choose a good, long password for the password safe. Do not try and pick random words yourself, you're terrible at it. (We all are). 
@@ -49,7 +58,7 @@ Go through all your sites and change their passwords to random strings of charac
 ## Two Factor Authentication
 A second step is wherever possible enabling Two Factor Authentication (2FA). You probably already have this on your Internet banking or [my.gov](http://www.my.gov.au) account. This works by asking for a second authentication token after your password, usually a time based number. (Without going into details some solid maths is used to know the token number at a specific time using an initially known seed value). Often this is sent by SMS (Which is terrible, but I'll get to that), some banks use physical token fobs that you carry on your keys. 
 
-There are also software generators, Facebook has one built in and Google have released an open source public implementation called Google Authenticator. These work by installing an App on your smartphone that can scan a QR code and use it as the seed for the 2FA token. A popular app for this is [Authy](http://www.authy.com) which synchronises your tokens to their servers and allows you to access them on multiple devices instead of always needing a specific phone. There is a trade off in security in having your details on their servers, but the upside is greater convenience. Authy claim to have no access to your codes.
+There are also software generators, Facebook has one built in and Google have released an open source public implementation called Google Authenticator. These work by installing an App on your smartphone that can scan a QR code and use it as the seed for the 2FA token. A popular app for this is [Authy](http://www.authy.com) which synchronises your tokens to their servers and allows you to access them on multiple devices instead of always needing a specific phone. There is a trade off in security in having your details on their servers, but the upside is greater convenience. Authy claim to have no access to your codes. Google Authenticator and [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app) both support this capability too now.
 
 Most websites that support these codes know you don't want to enter two passwords every time you visit so they offer to remember your browser for a period of time, usually weeks or a month. If you are using your computer this is a sensible option, if you are in an Internet cafe you would clearly not remember the access.
 
@@ -61,7 +70,7 @@ Without encryption anyone who has physical access to your computer can access yo
 If you have a recent iPhone or Google Pixel device your phone is encrypted already. If you have an older iPhone or non Google device it may not be. For extra safety it is recommended to encrypt your phone. Even with a password there are ways to get into a non encrypted phone that would allow someone access to your private messages, emails and photos. 
 ### Computers
 If you have an Apple computer you should enable [FileVault](https://support.apple.com/en-au/HT204837) which will encrypt the storage. If you
-are using Windows 8 or 10 Professional or Enterprise you can enable [BitLocker](https://www.howtogeek.com/192894/how-to-set-up-bitlocker-encryption-on-windows/) encryption. If you are running Windows 7, 8 or 10 Home edition you'll need third party software to encrypt the partitions. [Veracrypt](https://www.howtogeek.com/howto/6169/use-truecrypt-to-secure-your-data/) is a free option.
+are using Windows 8 or 10 Professional or Enterprise you can enable [BitLocker](https://www.howtogeek.com/192894/how-to-set-up-bitlocker-encryption-on-windows/) encryption. If you are running Windows 7, 8 or 10 Home edition you'll need third party software to encrypt the partitions. [Veracrypt](https://www.howtogeek.com/howto/6169/use-truecrypt-to-secure-your-data/) is a free option that requires a little more experience.
 
 ## Backups
 One of the most important components of security is having reliable off-site backups of your data. If you are compromised by ransomware that demands payment to decrypt your data, having a backup can be the difference between having to pay and not. If you lose your phone or laptop having a backup means you can recover all of your data. 
